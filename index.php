@@ -24,13 +24,16 @@
     
     <div class="painel">
 
-<h3>Login</h3>
 
-      <form>
+
+      <form action="acesso.php" method="post">
+        <h3>Login</h3>
+
         <div class="form-group">
           <i class="fa-solid fa-user"></i>
           <label>CPF</label>
           <input
+            name="cpf"
             type="text"
             class="form-control"
             placeholder="Seu cpf"
@@ -40,6 +43,7 @@
           <i class="fa-solid fa-lock"></i>
           <label>Senha</label>
           <input
+           name="senha"
             type="password"
             class="form-control"
             placeholder="Senha"
