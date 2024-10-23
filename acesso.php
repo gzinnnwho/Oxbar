@@ -21,10 +21,18 @@ $colunas= mysqli_fetch_assoc($resultado);
 
 if(mysqli_num_rows($resultado) > 0 ){
 
-echo"login efetuado com sucesso";
+session_start();
+$_SESSION['usuario'] =  $colunas['nome'];
+$_SESSION['cpf'] = $cpf;
+$_SESSION['senha'] = $senha;
+
+header('location: principal.php');
 
 }else{
-    echo"mas e burro em fi";
+    
+    session_unset();
+    session_destroy();
+    header('location: index.php');
 
 }
 
